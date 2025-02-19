@@ -1,5 +1,6 @@
 import os
 
+""" !!!!IF NOT INSTALLED DEPENDENCIES FOR YOLOv5 THEN DO NOT SKIP THIS STEP!!!! """
 # Step 1: Clone YOLOv5 repository
 os.system("git clone https://github.com/ultralytics/yolov5.git")
 os.chdir("yolov5")
