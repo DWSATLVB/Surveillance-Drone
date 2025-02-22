@@ -4,7 +4,7 @@ import numpy as np
 
 model = torch.hub.load('ultralytics/yolov5', 'custom', path='runs/train/exp/weights/best.pt')  # Use your best-trained model
 
-# Ensure the model uses GPU if available
+
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 model.to(device)
 
@@ -23,7 +23,7 @@ for *box, conf, cls in zip(*results.xywh[0].tolist(), results.conf[0].tolist(), 
         knives_and_guns.append((box, conf, cls))
 
 for box, conf, cls in knives_and_guns:
-    x1, y1, x2, y2 = box  # Bounding box coordinates
+    x1, y1, x2, y2 = box 
     label = f"{model.names[int(cls)]}: {conf:.2f}"
     
     cv2.rectangle(img, (int(x1), int(y1)), (int(x2), int(y2)), (0, 255, 0), 2)
