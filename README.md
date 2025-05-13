@@ -1,5 +1,5 @@
 # Surveillance-Drone
-Code for Surveillance Drones using ESP32 equipped with ESP cam to detect weapons using YOLOv5, custom AI model. 
+Code for Surveillance Drones using ESP32 equipped with ESP cam to detect weapons using YOLOv5, customized primarily to detect weapons. 
 
 ## Dependencies
 #### **1. numpy**
@@ -18,4 +18,5 @@ pip install numpy opencv-python torch torchvision
 pip install -r https://raw.githubusercontent.com/ultralytics/yolov5/main/requirements.txt
 ```
 ## Note 
-To fine tune the model to detect certain objects requires customized dataset and cannot be done directly by YOLOv5. 
+To fine tune the model to detect certain objects requires customized dataset and cannot be done directly by YOLOv5. The .pt file for pistols (only) is given and for other weapons, training is required. 
+
